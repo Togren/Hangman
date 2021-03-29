@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <link type="text/css" rel="stylesheet" href="css/vendors/bootstrap.min.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="css/vendors/bootstrap-grid.min.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="css/vendors/bootstrap-utilities.min.css" media="all" />
+</head>
+<body>
+    <div class="container">
+        <div id="container__error" class="d-flex flex-row justify-content-center mx-auto my-4"></div>
+        <div id="container__word" class="d-flex flex-row justify-content-center mx-auto my-4"></div>
+        <div id="container__remaining" class="d-flex flex-row justify-content-center mx-auto my-4"></div>
+        <form id="form__guess" class="d-flex flex-column justify-content-center align-items-center">
+            <label for="input__guess" class="form-check-label mx-2 my-2 w-25">Enter a letter: </label>
+            <input type="text" id="input__guess" maxlength="1" class="mx-2 form-control w-25" autofocus>
+            <div id="container__hint" class="form-text"></div>
+            <input type="submit" id="submit__guess" class="btn btn-primary mx-4 my-4 w-50" value="Guess!">
+        </form>
+        <div id="message__error" class="alert alert-danger my-3 invisible" role="alert">
+            Oh no! You've not managed to guess the word and now the man hangs!
+        </div>
+        <div id="message__success" class="alert alert-success my-3 invisible" role="alert">
+            Yes! You did it! You crazy son of a b*tch did it! You won!
+        </div>
+        <div id="restart__container" class="my-3 invisible">
+            <button id="button__restart" class="btn btn-primary w-100">Restart the game!</button>
+        </div>
+    </div>
+</body>
+<script src="js/index.js" type="module"></script>
+</html>
